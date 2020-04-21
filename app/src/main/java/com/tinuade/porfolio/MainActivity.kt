@@ -13,82 +13,59 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        showLog( "Application is onCreate")
+        showLog("Application is onCreate")
 
-        playStore_image.setOnClickListener {
+        fun viewMyIntent(url: String) {
             val intent = Intent()
             intent.action = Intent.ACTION_VIEW
-            intent.data =
-                Uri.parse("https://play.google.com/store/apps/details?id=com.project.android_kidstories")
+            intent.data = Uri.parse(url)
             startActivity(Intent.createChooser(intent, "Welcome"))
+
+        }
+
+        playStore_image.setOnClickListener {
+            viewMyIntent("https://play.google.com/store/apps/details?id=com.project.android_kidstories")
 
         }
         github_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://github.com/Jolugba/")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://github.com/Jolugba/")
 
         }
         bitBucket_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://bitbucket.org/dashboard/projects")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://bitbucket.org/dashboard/projects")
 
         }
         facebook_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://www.facebook.com")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://www.facebook.com")
 
         }
         twitter_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://mobile.twitter.com/missTinuade")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://mobile.twitter.com/missTinuade")
 
 
         }
         instagram_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://www.instagram.com/estherjolugba/")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://www.instagram.com/estherjolugba/")
 
 
         }
         googlePlus.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://myaccount.google.com/profile")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://myaccount.google.com/profile")
 
 
         }
         youTube_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://www.youtube.com/")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://www.youtube.com/")
 
 
         }
         dribbble_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://dribbble.com/")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://dribbble.com/")
 
 
         }
         linkedIn_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://www.linkedin.com/in/esther-jolugba-0b336a185")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://www.linkedin.com/in/esther-jolugba-0b336a185")
 
 
         }
@@ -114,34 +91,22 @@ class MainActivity : AppCompatActivity() {
 
         }
         skype_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://www.skype.com/en/")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://www.skype.com/en/")
 
 
         }
         google_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://www.google.com")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://www.google.com")
 
 
         }
         androidBot_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://developer.android.com/")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://developer.android.com/")
 
 
         }
         web_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://dev.start.ng/#/user/dashboard")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+            viewMyIntent("https://dev.start.ng/#/user/dashboard")
 
 
         }
@@ -152,21 +117,21 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        showLog( "The application is onPause")
+        showLog("The application is onPause")
 
 
     }
 
     override fun onResume() {
         super.onResume()
-        showLog( "The application is onResume")
+        showLog("The application is onResume")
 
 
     }
 
     override fun onStop() {
         super.onStop()
-        showLog( "The application is onStop")
+        showLog("The application is onStop")
 
     }
 
@@ -178,7 +143,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onRestart() {
         super.onRestart()
-        showLog( "The application is onRestart")
+        showLog("The application is onRestart")
 
     }
 
