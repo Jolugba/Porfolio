@@ -23,7 +23,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="40dp"
-        android:src="@drawable/pic"
+        android:src="@drawable/picture"
         app:civ_border_color="@color/text_Color_two"
         app:civ_border_width="2dp"
         app:layout_constraintEnd_toEndOf="parent"
