@@ -15,57 +15,49 @@ class MainActivity : AppCompatActivity() {
 
         showLog("Application is onCreate")
 
-        fun viewMyIntent(url: String) {
-            val intent = Intent()
-            intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse(url)
-            startActivity(Intent.createChooser(intent, "Welcome"))
-
-        }
-
         playStore_image.setOnClickListener {
-            viewMyIntent("https://play.google.com/store/apps/details?id=com.project.android_kidstories")
+            viewIntent("https://play.google.com/store/apps/details?id=com.project.android_kidstories")
 
         }
         github_image.setOnClickListener {
-            viewMyIntent("https://github.com/Jolugba/")
+            viewIntent("https://github.com/Jolugba/")
 
         }
         bitBucket_image.setOnClickListener {
-            viewMyIntent("https://bitbucket.org/dashboard/projects")
+            viewIntent("https://bitbucket.org/dashboard/projects")
 
         }
         facebook_image.setOnClickListener {
-            viewMyIntent("https://www.facebook.com")
+            viewIntent("https://www.facebook.com")
 
         }
         twitter_image.setOnClickListener {
-            viewMyIntent("https://mobile.twitter.com/missTinuade")
+            viewIntent("https://mobile.twitter.com/missTinuade")
 
 
         }
         instagram_image.setOnClickListener {
-            viewMyIntent("https://www.instagram.com/estherjolugba/")
+            viewIntent("https://www.instagram.com/estherjolugba/")
 
 
         }
         googlePlus.setOnClickListener {
-            viewMyIntent("https://myaccount.google.com/profile")
+            viewIntent("https://myaccount.google.com/profile")
 
 
         }
         youTube_image.setOnClickListener {
-            viewMyIntent("https://www.youtube.com/")
+            viewIntent("https://www.youtube.com/")
 
 
         }
         dribbble_image.setOnClickListener {
-            viewMyIntent("https://dribbble.com/")
+            viewIntent("https://dribbble.com/")
 
 
         }
         linkedIn_image.setOnClickListener {
-            viewMyIntent("https://www.linkedin.com/in/esther-jolugba-0b336a185")
+            viewIntent("https://www.linkedin.com/in/esther-jolugba-0b336a185")
 
 
         }
@@ -91,22 +83,22 @@ class MainActivity : AppCompatActivity() {
 
         }
         skype_image.setOnClickListener {
-            viewMyIntent("https://www.skype.com/en/")
+            viewIntent("https://www.skype.com/en/")
 
 
         }
         google_image.setOnClickListener {
-            viewMyIntent("https://www.google.com")
+            viewIntent("https://www.google.com")
 
 
         }
         androidBot_image.setOnClickListener {
-            viewMyIntent("https://developer.android.com/")
+            viewIntent("https://developer.android.com/")
 
 
         }
         web_image.setOnClickListener {
-            viewMyIntent("https://dev.start.ng/#/user/dashboard")
+            viewIntent("https://dev.start.ng/#/user/dashboard")
 
 
         }
