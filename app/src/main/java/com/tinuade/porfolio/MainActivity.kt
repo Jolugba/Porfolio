@@ -3,20 +3,17 @@ package com.tinuade.porfolio
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.grid_layout.*
 
 class MainActivity : AppCompatActivity() {
-    companion object {
-        var TAG = MainActivity::class.java.simpleName
-    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.i(TAG, "Application is onCreate")
+        showLog( "Application is onCreate")
 
         playStore_image.setOnClickListener {
             val intent = Intent()
@@ -155,33 +152,33 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        Log.i(TAG, "The application is onPause")
+        showLog( "The application is onPause")
 
 
     }
 
     override fun onResume() {
         super.onResume()
-        Log.i(TAG, "The application is onResume")
+        showLog( "The application is onResume")
 
 
     }
 
     override fun onStop() {
         super.onStop()
-        Log.i(TAG, "The application is onStop")
+        showLog( "The application is onStop")
 
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.i(TAG, "The application is onDestroy")
+        showLog("The application is onDestroy")
 
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.i(TAG, "The application is onRestart")
+        showLog( "The application is onRestart")
 
     }
 
