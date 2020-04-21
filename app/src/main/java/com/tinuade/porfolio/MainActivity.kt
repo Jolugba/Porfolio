@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         github_image.setOnClickListener {
             val intent = Intent()
             intent.action = Intent.ACTION_VIEW
-            intent.data = Uri.parse("https://github.com/Jolugba/Porfolio")
+            intent.data = Uri.parse("https://github.com/Jolugba/")
             startActivity(Intent.createChooser(intent, "Welcome"))
 
         }
