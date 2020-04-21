@@ -24,8 +24,8 @@
         android:layout_height="80dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/picture"
-        app:civ_border_color="@color/text_Color_two"
-        app:civ_border_width="2dp"
+        app:civ_border_color="@color/pic_background_Color"
+        app:civ_border_width="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,16 +76,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tech_used_text" />
 
-    <ImageView
+    <View
         android:id="@+id/view2"
         android:layout_width="0dp"
-        android:layout_height="5dp"
+        android:layout_height="0.5dp"
         android:layout_marginTop="8dp"
-        android:layerType="software"
+        android:background="@color/pic_background_Color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bio_text"
-        tools:srcCompat="@drawable/dotted" />
+        app:layout_constraintTop_toBottomOf="@+id/bio_text" />
 
     <include
         android:id="@+id/app_layout"
@@ -98,6 +97,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view2"
-        app:layout_constraintVertical_bias="0.489" />
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
