@@ -8,8 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.grid_layout.*
 
 class MainActivity : AppCompatActivity() {
-    companion object{
-        var TAG=MainActivity::class.java.simpleName
+    companion object {
+        var TAG = MainActivity::class.java.simpleName
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -94,7 +94,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(intent, "Welcome"))
 
 
-
         }
         mail_image.setOnClickListener {
             val intent = Intent()
@@ -156,33 +155,33 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        Log.i(TAG,"The application is onPause")
+        Log.i(TAG, "The application is onPause")
 
 
     }
 
     override fun onResume() {
         super.onResume()
-        Log.i(TAG,"The application is onResume")
+        Log.i(TAG, "The application is onResume")
 
 
     }
 
     override fun onStop() {
         super.onStop()
-        Log.i(TAG,"The application is onStop")
+        Log.i(TAG, "The application is onStop")
 
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.i(TAG,"The application is onDestroy")
+        Log.i(TAG, "The application is onDestroy")
 
     }
 
     override fun onRestart() {
         super.onRestart()
-        Log.i(TAG,"The application is onRestart")
+        Log.i(TAG, "The application is onRestart")
 
     }
 
