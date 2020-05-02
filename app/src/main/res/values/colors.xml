@@ -6,5 +6,5 @@
     <color name="text_Color">#282830</color>
     <color name="text_Color_two">#000000</color>
     <color name="background_Color">#FFFFFf</color>
-    <color name="pic_background_Color">#FF0000</color>
+    <color name="pic_background_Color">#FFC107</color>
 </resources>

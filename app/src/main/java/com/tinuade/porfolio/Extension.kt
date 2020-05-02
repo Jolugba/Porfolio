@@ -4,7 +4,6 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.util.Log
-import androidx.core.content.ContextCompat.startActivity
 
 // Extensions for Log class
 fun Activity.showLog(message:String){

@@ -72,12 +72,10 @@ class MainActivity : AppCompatActivity() {
 
         }
         whatsapp_image.setOnClickListener {
-            val intent = Intent()
-            intent.action = Intent.ACTION_SEND
-            intent.putExtra(Intent.EXTRA_TEXT, "Send me a message")
-            intent.type = "text/plain"
-            intent.setPackage("com.whatsapp")
-            startActivity(Intent.createChooser(intent, "Welcome"))
+
+            viewIntent("https://api.whatsapp.com/send?phone=2348162302123")
+
+
 
 
         }
