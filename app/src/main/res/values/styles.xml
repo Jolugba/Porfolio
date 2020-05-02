@@ -7,7 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <!-- Icon Text Area style. -->
     <style name="textArea">
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:fontFamily">@font/poppins_light</item>
@@ -15,5 +15,49 @@
         <item name="android:textSize">12sp</item>
         <item name="android:textStyle">normal</item>
     </style>
+
+    <!-- Edit Text styles Portrait. -->
+    <style name="edit_text">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:background">@color/text_Color_three</item>
+        <item name="paddingStart">16dp</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="paddingEnd">16dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:selectAllOnFocus">true</item>
+    </style>
+    <!-- Edit Text styles Landscape -->
+    <style name="edit_text_land">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:background">@color/text_Color_three</item>
+        <item name="paddingStart">16dp</item>
+        <item name="paddingEnd">16dp</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:selectAllOnFocus">true</item>
+    </style>
+    <!-- Edit Text styles Login Landscape -->
+    <style name="edit_text_land_login">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="fontFamily">@font/poppins_light</item>
+        <item name="android:background">@color/text_Color_three</item>
+        <item name="paddingStart">16dp</item>
+        <item name="paddingEnd">16dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:selectAllOnFocus">true</item>
+    </style>
+
 
 </resources>
