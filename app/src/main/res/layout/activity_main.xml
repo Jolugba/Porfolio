@@ -85,7 +85,7 @@
         app:layout_constraintBottom_toTopOf="@+id/app_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bio_text" />
+        app:layout_constraintTop_toBottomOf="@+id/display_text" />
 
     <include
         android:id="@+id/app_layout"
@@ -96,5 +96,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/display_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/textview"
+        android:textColor="@color/text_Color_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bio_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
