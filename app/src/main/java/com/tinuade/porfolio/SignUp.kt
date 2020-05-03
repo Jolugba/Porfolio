@@ -8,18 +8,20 @@ import android.text.TextUtils
 import android.util.Patterns
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.tinuade.porfolio.Login.AppPreferences.editor
+import com.tinuade.porfolio.Login.AppPreferences.preferences
 import com.tinuade.porfolio.SignUp.AppPreferences.MODE
 import com.tinuade.porfolio.SignUp.AppPreferences.NAME
-import com.tinuade.porfolio.SignUp.AppPreferences.editor
-import com.tinuade.porfolio.SignUp.AppPreferences.preferences
+//import com.tinuade.porfolio.SignUp.AppPreferences.editor
+//import com.tinuade.porfolio.SignUp.AppPreferences.preferences
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUp : AppCompatActivity() {
     object AppPreferences {
         const val NAME = "com.tinuade.porfolio.portfolio"
         const val MODE = Context.MODE_PRIVATE
-        lateinit var preferences: SharedPreferences
-        lateinit var editor: SharedPreferences.Editor
+        //lateinit var preferences: SharedPreferences
+        //lateinit var editor: SharedPreferences.Editor
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,11 +64,14 @@ class SignUp : AppCompatActivity() {
             confirm_password_editText.setText("")
         } else if (TextUtils.isEmpty(phoneNumber) && phoneNumber.length < 9) {
             showToast("Please Enter a valid Phone Number")
-        } else
-            preferences = getSharedPreferences(NAME, MODE)
+        } else{
+
+            val preferences:SharedPreferences =getSharedPreferences(NAME, MODE)
+
         // as now we have information in string. Lets stored them with the help of editor
-        editor= editor.putString(email + password + "data", name + "\n" + email)
-        editor.commit()   // commit the values
+         val editor: SharedPreferences.Editor =preferences.edit()
+            editor.putString(email + password + "data", name + "\n" + email)
+        editor.apply()   // commit the values
         progress.visibility=View.VISIBLE
         // after saving the value open next activity
         val intent = Intent(this, Login::class.java)
@@ -76,7 +81,7 @@ class SignUp : AppCompatActivity() {
         progress.visibility=View.GONE
 
     }
-}
+}}
 
 
 
