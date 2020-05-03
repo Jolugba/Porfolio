@@ -80,7 +80,6 @@
         android:id="@+id/view2"
         android:layout_width="0dp"
         android:layout_height="0.5dp"
-        android:layout_marginTop="8dp"
         android:background="@color/pic_background_Color"
         app:layout_constraintBottom_toTopOf="@+id/app_layout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,12 +98,16 @@
 
     <TextView
         android:id="@+id/display_text"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppins"
+        android:autoText="false"
+        android:clickable="true"
+        android:fontFamily="@font/poppins_light"
+        android:maxLines="1"
         android:text="@string/textview"
-        android:textColor="@color/text_Color_two"
+        android:textAlignment="center"
+        android:textColor="@color/text_Color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bio_text" />

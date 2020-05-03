@@ -47,7 +47,7 @@ class Login : AppCompatActivity() {
             preferences = getSharedPreferences(NAME, MODE)
             val userEmail: String? = preferences.getString(
                 email + password + "data",
-                "email address or password does not match with Your Registration details"
+                "Login details does not match Registration details"
             )
             editor = preferences.edit()
             editor.putString("display", userEmail)
