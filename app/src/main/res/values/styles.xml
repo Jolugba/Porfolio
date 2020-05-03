@@ -40,7 +40,7 @@
         <item name="android:background">@color/text_Color_three</item>
         <item name="paddingStart">16dp</item>
         <item name="paddingEnd">16dp</item>
-        <item name="android:padding">2dp</item>
+        <item name="android:padding">4dp</item>
         <item name="android:drawablePadding">12dp</item>
         <item name="android:selectAllOnFocus">true</item>
     </style>

@@ -15,7 +15,7 @@
         android:cropToPadding="true"
         android:scaleType="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/signup" />
@@ -68,18 +68,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone_number_editText" />
 
-    <EditText
-        android:id="@+id/confirm_password_editText"
-        style="@style/edit_text_land"
-        android:layout_width="0dp"
-        android:layout_marginTop="8dp"
-        android:drawableStart="@drawable/lock"
-        android:hint="@string/confirm_password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_editText" />
-
     <Button
         android:id="@+id/signUp_button"
         android:layout_width="0dp"
@@ -92,7 +80,7 @@
         android:textColor="@color/text_Color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_password_editText" />
+        app:layout_constraintTop_toBottomOf="@+id/password_editText" />
 
     <TextView
         android:id="@+id/signInLink"
