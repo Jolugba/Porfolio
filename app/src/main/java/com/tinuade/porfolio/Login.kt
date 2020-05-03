@@ -43,7 +43,7 @@ class Login : AppCompatActivity() {
         } else if (TextUtils.isEmpty(password)) {
             showToast("Please Enter a valid Password")
         } else {
-            AppPreferences.preferences = getSharedPreferences(NAME, MODE)
+            preferences = getSharedPreferences(NAME, MODE)
             var userEmail: String? = preferences.getString(
                 email + password + "data",
                 "email address or password is incorrect"
