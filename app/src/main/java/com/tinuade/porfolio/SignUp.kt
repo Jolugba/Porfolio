@@ -65,7 +65,7 @@ class SignUp : AppCompatActivity() {
         } else
             preferences = getSharedPreferences(NAME, MODE)
         // as now we have information in string. Lets stored them with the help of editor
-        editor.putString(email + password + "data", name + "\n" + email)
+        editor= editor.putString(email + password + "data", name + "\n" + email)
         editor.commit()   // commit the values
         progress.visibility=View.VISIBLE
         // after saving the value open next activity
