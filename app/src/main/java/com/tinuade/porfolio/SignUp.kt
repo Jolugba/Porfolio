@@ -26,6 +26,7 @@ class SignUp : AppCompatActivity() {
         signInLink.setOnClickListener {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
+            finish()
 
 
         }
@@ -58,15 +59,14 @@ class SignUp : AppCompatActivity() {
 
             val preferences: SharedPreferences = getSharedPreferences(NAME, MODE)
 
-            // as now we have information in string. Lets stored them with the help of editor
+            // stored them with the help of editor
             val editor: SharedPreferences.Editor = preferences.edit()
             editor.putString(email + password + "data", "Email: $email")
-            editor.apply()   // commit the values
+            editor.apply()
             progress.visibility = View.VISIBLE
-            // after saving the value open next activity
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
-
+            finish()
             showToast("Successful")
             progress.visibility = View.GONE
 

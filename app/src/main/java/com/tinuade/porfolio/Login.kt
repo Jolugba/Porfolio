@@ -28,6 +28,7 @@ class Login : AppCompatActivity() {
         signUpLink.setOnClickListener {
             val intent = Intent(this, SignUp::class.java)
             startActivity(intent)
+            finish()
         }
         login_button.setOnClickListener {
             loginUser()
@@ -44,16 +45,17 @@ class Login : AppCompatActivity() {
             showToast("Please Enter a valid Password")
         } else {
             preferences = getSharedPreferences(NAME, MODE)
-            var userEmail: String? = preferences.getString(
+            val userEmail: String? = preferences.getString(
                 email + password + "data",
-                "email address or password is incorrect"
+                "email address or password does not match with Your Registration details"
             )
             editor = preferences.edit()
             editor.putString("display", userEmail)
             editor.commit()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            showToast("successful")
+            finish()
+            showToast("Successful")
 
         }
     }
