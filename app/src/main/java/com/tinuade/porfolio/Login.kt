@@ -38,15 +38,26 @@ class Login : AppCompatActivity() {
     private fun loginUser() {
         val email: String = login_email_editText.text.toString()
         val password: String = login_password_editText.text.toString()
+        preferences = getSharedPreferences(NAME, MODE)
+        var getName: String? = preferences.getString("name",null)
+        var getPassword: String? = preferences.getString("password",null)
+        var getEmail: String? = preferences.getString("email",null)
+        var getPhoneNumber: String? = preferences.getString("phonenumber",null)
+
 
         if (TextUtils.isEmpty(email) && !Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             showToast("Please Enter a valid Email Address")
         } else if (TextUtils.isEmpty(password)) {
             showToast("Please Enter a valid Password")
+        } else if (getEmail.isNullOrEmpty()&&getPassword.isNullOrEmpty()) {
+            showToast("Details does not belong to any account")
+        } else if (!(getEmail.equals(email))) {
+            showToast("Email is incorrect")
+        }else if (!(getPassword.equals(password))) {
+                showToast("password is incorrect")
         } else {
-            preferences = getSharedPreferences(NAME, MODE)
             val userEmail: String? = preferences.getString(
-                email + password + "data",
+                getEmail + getPassword + "data",
                 "Login details does not match Registration details"
             )
             editor = preferences.edit()

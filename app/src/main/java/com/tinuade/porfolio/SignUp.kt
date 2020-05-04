@@ -61,13 +61,17 @@ class SignUp : AppCompatActivity() {
 
             // stored them with the help of editor
             val editor: SharedPreferences.Editor = preferences.edit()
+            editor.putString("name",name)
+            editor.putString("email",email)
+            editor.putString("password",password)
+            editor.putString("phonenumber",phoneNumber)
             editor.putString(email + password + "data", "Email: $email")
             editor.apply()
             progress.visibility = View.VISIBLE
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
             finish()
-            showToast("Successful")
+            showToast("you have Successfully registered")
             progress.visibility = View.GONE
 
         }
