@@ -56,12 +56,12 @@ class Login : AppCompatActivity() {
         }else if (!(getPassword.equals(password))) {
                 showToast("password is incorrect")
         } else {
-            val userEmail: String? = preferences.getString(
+            val userDetails: String? = preferences.getString(
                 getEmail + getPassword + "data",
-                "Login details does not match Registration details"
+                "true"
             )
             editor = preferences.edit()
-            editor.putString("display", userEmail)
+            editor.putString("display", userDetails)
             editor.commit()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
