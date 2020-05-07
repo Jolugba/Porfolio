@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_Color">
+
+
+    <ImageView
+        android:id="@+id/playStore_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/github_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/google_play" />
+
+    <ImageView
+        android:id="@+id/github_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/bitBucket_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/playStore_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/github" />
+
+    <ImageView
+        android:id="@+id/bitBucket_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/facebook_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/github_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bitbucket" />
+
+    <ImageView
+        android:id="@+id/facebook_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/twitter_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bitBucket_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/facebook" />
+
+    <TextView
+        android:id="@+id/playStore_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/play_store"
+        app:layout_constraintEnd_toEndOf="@+id/playStore_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/playStore_image"
+        app:layout_constraintTop_toBottomOf="@+id/playStore_image" />
+
+    <TextView
+        android:id="@+id/github_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/github"
+        app:layout_constraintBaseline_toBaselineOf="@+id/playStore_text"
+        app:layout_constraintEnd_toEndOf="@+id/github_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/github_image" />
+
+    <TextView
+        android:id="@+id/bitBucket_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bitbucket"
+        app:layout_constraintBaseline_toBaselineOf="@+id/github_text"
+        app:layout_constraintEnd_toEndOf="@+id/bitBucket_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/bitBucket_image" />
+
+    <TextView
+        android:id="@+id/facebook_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/facebook"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bitBucket_text"
+        app:layout_constraintEnd_toEndOf="@+id/facebook_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/facebook_image" />
+
+    <ImageView
+        android:id="@+id/twitter_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/instagram_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/facebook_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/twitter" />
+
+    <ImageView
+        android:id="@+id/instagram_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/googlePlus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twitter_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/instagram" />
+
+    <ImageView
+        android:id="@+id/googlePlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/youTube_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/instagram_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/google_plus" />
+
+    <ImageView
+        android:id="@+id/youTube_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/googlePlus"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/youtube" />
+
+    <TextView
+        android:id="@+id/twitter_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twitter"
+        app:layout_constraintBaseline_toBaselineOf="@+id/facebook_text"
+        app:layout_constraintEnd_toEndOf="@+id/twitter_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/twitter_image" />
+
+    <TextView
+        android:id="@+id/instagram_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/instagram"
+        app:layout_constraintBaseline_toBaselineOf="@+id/twitter_text"
+        app:layout_constraintEnd_toEndOf="@+id/instagram_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/twitter_text"
+        app:layout_constraintStart_toStartOf="@+id/instagram_image" />
+
+    <TextView
+        android:id="@+id/googlePlus_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/google_plus"
+        app:layout_constraintBaseline_toBaselineOf="@+id/instagram_text"
+        app:layout_constraintEnd_toEndOf="@+id/googlePlus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/googlePlus" />
+
+    <TextView
+        android:id="@+id/youTube_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/youtube"
+        app:layout_constraintBaseline_toBaselineOf="@+id/googlePlus_text"
+        app:layout_constraintEnd_toEndOf="@+id/youTube_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/googlePlus_text"
+        app:layout_constraintStart_toStartOf="@+id/youTube_image" />
+
+    <ImageView
+        android:id="@+id/dribbble_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/linkedIn_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playStore_text"
+        app:srcCompat="@drawable/dribbble" />
+
+    <ImageView
+        android:id="@+id/linkedIn_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/mail_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/dribbble_image"
+        app:layout_constraintTop_toBottomOf="@+id/github_text"
+        app:srcCompat="@drawable/linkedin" />
+
+    <ImageView
+        android:id="@+id/mail_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/whatsapp_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linkedIn_image"
+        app:layout_constraintTop_toBottomOf="@+id/bitBucket_text"
+        app:srcCompat="@drawable/mail" />
+
+    <ImageView
+        android:id="@+id/whatsapp_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/skype_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/mail_image"
+        app:layout_constraintTop_toBottomOf="@+id/facebook_text"
+        app:srcCompat="@drawable/whatsapp" />
+
+    <TextView
+        android:id="@+id/dribbble_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/dribble"
+        app:layout_constraintEnd_toEndOf="@+id/dribbble_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/dribbble_image"
+        app:layout_constraintTop_toBottomOf="@+id/dribbble_image" />
+
+    <TextView
+        android:id="@+id/linkedIn_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/linkedin"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dribbble_text"
+        app:layout_constraintEnd_toEndOf="@+id/linkedIn_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/linkedIn_image" />
+
+    <TextView
+        android:id="@+id/email_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/e_mail"
+        app:layout_constraintBaseline_toBaselineOf="@+id/linkedIn_text"
+        app:layout_constraintEnd_toEndOf="@+id/mail_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linkedIn_text"
+        app:layout_constraintStart_toStartOf="@+id/mail_image" />
+
+    <TextView
+        android:id="@+id/whatsapp_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/whatsapp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/email_text"
+        app:layout_constraintEnd_toEndOf="@+id/whatsapp_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/email_text"
+        app:layout_constraintStart_toStartOf="@+id/whatsapp_image" />
+
+    <ImageView
+        android:id="@+id/skype_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/google_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/whatsapp_image"
+        app:layout_constraintTop_toBottomOf="@+id/twitter_text"
+        app:srcCompat="@drawable/skype" />
+
+    <ImageView
+        android:id="@+id/google_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/androidBot_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/skype_image"
+        app:layout_constraintTop_toBottomOf="@+id/instagram_text"
+        app:srcCompat="@drawable/google" />
+
+    <ImageView
+        android:id="@+id/androidBot_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/web_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/google_image"
+        app:layout_constraintTop_toBottomOf="@+id/googlePlus_text"
+        app:srcCompat="@drawable/ic_android" />
+
+    <ImageView
+        android:id="@+id/web_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/androidBot_image"
+        app:layout_constraintTop_toBottomOf="@+id/youTube_text"
+        app:srcCompat="@drawable/website" />
+
+    <TextView
+        android:id="@+id/skype_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/skype"
+        app:layout_constraintBaseline_toBaselineOf="@+id/whatsapp_text"
+        app:layout_constraintEnd_toEndOf="@+id/skype_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/skype_image" />
+
+    <TextView
+        android:id="@+id/google_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/google"
+        app:layout_constraintBaseline_toBaselineOf="@+id/skype_text"
+        app:layout_constraintEnd_toEndOf="@+id/google_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/google_image" />
+
+    <TextView
+        android:id="@+id/android_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/android"
+        app:layout_constraintBaseline_toBaselineOf="@+id/google_text"
+        app:layout_constraintEnd_toEndOf="@+id/androidBot_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/androidBot_image" />
+
+    <TextView
+        android:id="@+id/web_text"
+        style="@style/textArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/website"
+        app:layout_constraintBaseline_toBaselineOf="@+id/android_text"
+        app:layout_constraintEnd_toEndOf="@+id/web_image"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/web_image" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

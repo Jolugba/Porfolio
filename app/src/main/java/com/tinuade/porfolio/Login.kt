@@ -52,7 +52,7 @@ class Login : AppCompatActivity() {
         } else {
             val userDetails: String? = preferences.getString(
                 getEmail + getPassword,
-                "true"
+                getEmail
             )
             editor = preferences.edit()
             editor.putString("display", userDetails)
