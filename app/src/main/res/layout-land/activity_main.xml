@@ -24,7 +24,7 @@
         android:id="@+id/profile_image"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:src="@drawable/picture"
         app:civ_border_color="@color/pic_background_Color"
         app:civ_border_width="1dp"
@@ -42,10 +42,10 @@
         android:textAlignment="center"
         android:textColor="@color/text_Color_two"
         android:textIsSelectable="true"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
@@ -58,24 +58,25 @@
         android:textAlignment="center"
         android:textColor="@color/text_Color_two"
         android:textIsSelectable="true"
-        android:textSize="14sp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_text" />
+
 
     <TextView
         android:id="@+id/bio_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
-        android:text="@string/bio"
+        android:text="@string/bio_land"
         android:textAlignment="center"
         android:textColor="@color/text_Color_two"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tech_used_text" />
-
 
     <include
         android:id="@+id/app_layout"
@@ -99,6 +100,7 @@
         android:text="@string/textview"
         android:textAlignment="center"
         android:textColor="@color/text_Color"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bio_text" />
