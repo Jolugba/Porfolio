@@ -8,18 +8,16 @@ import android.text.TextUtils
 import android.util.Patterns
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.tinuade.porfolio.SignUp.AppPreferences.MODE
-import com.tinuade.porfolio.SignUp.AppPreferences.NAME
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUp : AppCompatActivity() {
-   companion object AppPreferences {
+    companion object AppPreferences {
         const val NAME = "com.tinuade.porfolio.portfolio"
         const val MODE = Context.MODE_PRIVATE
-        const val FULLNAME="name"
-        const val EMAIL="email"
-        const val PASSWORD="password"
-        const val PHONENUMBER="phonenumber"
+        const val FULLNAME = "name"
+        const val EMAIL = "email"
+        const val PASSWORD = "password"
+        const val PHONENUMBER = "phonenumber"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,10 +50,10 @@ class SignUp : AppCompatActivity() {
 
         // stored them with the help of editor
         val editor: SharedPreferences.Editor = preferences.edit()
-        editor.putString(FULLNAME,name)
-        editor.putString(EMAIL,email)
-        editor.putString(PASSWORD,password)
-        editor.putString(PHONENUMBER,phoneNumber)
+        editor.putString(FULLNAME, name)
+        editor.putString(EMAIL, email)
+        editor.putString(PASSWORD, password)
+        editor.putString(PHONENUMBER, phoneNumber)
 
         if (TextUtils.isEmpty(name) && name.length < 3) {
             showToast("Please Enter a valid Name")
@@ -70,20 +68,20 @@ class SignUp : AppCompatActivity() {
         } else if (TextUtils.isEmpty(phoneNumber) && phoneNumber.length < 9) {
             showToast("Please Enter a valid Phone Number")
             password_editText.setText("")
-                } else {
+        } else {
 
-                    editor.putString(email + password + "data", "Email: $email")
-                    editor.apply()
-                    progress.visibility = View.VISIBLE
-                    val intent = Intent(this, Login::class.java)
-                    startActivity(intent)
-                    finish()
-                    showToast("you have Successfully registered")
-                    progress.visibility = View.GONE
+            editor.putString(email + password, "Email: $email")
+            editor.apply()
+            progress.visibility = View.VISIBLE
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+            finish()
+            showToast("you have Successfully registered")
+            progress.visibility = View.GONE
 
-                }
-            }
         }
+    }
+}
 
 
 

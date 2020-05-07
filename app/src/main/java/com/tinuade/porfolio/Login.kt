@@ -10,10 +10,8 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 class Login : AppCompatActivity() {
 
-        lateinit var preferences: SharedPreferences
-        lateinit var editor: SharedPreferences.Editor
-
-
+    lateinit var preferences: SharedPreferences
+    lateinit var editor: SharedPreferences.Editor
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,17 +30,16 @@ class Login : AppCompatActivity() {
     }
 
 
-
     private fun loginUser() {
         val email: String = login_email_editText.text.toString()
         val password: String = login_password_editText.text.toString()
         preferences = getSharedPreferences(SignUp.NAME, SignUp.MODE)
-        var getPassword: String? = preferences.getString(SignUp.PASSWORD,null)
-        var getEmail: String? = preferences.getString(SignUp.EMAIL,null)
+        var getPassword: String? = preferences.getString(SignUp.PASSWORD, null)
+        var getEmail: String? = preferences.getString(SignUp.EMAIL, null)
 
 
 
-        if (getEmail.isNullOrEmpty()&&getPassword.isNullOrEmpty()) {
+        if (getEmail.isNullOrEmpty() && getPassword.isNullOrEmpty()) {
             showToast("Details does not belong to any account")
         } else if (TextUtils.isEmpty(password)) {
             showToast("Please Enter a valid Password")
@@ -50,11 +47,11 @@ class Login : AppCompatActivity() {
             showToast("Please Enter a valid Email Address")
         } else if (!(getEmail.equals(email))) {
             showToast("Email is incorrect")
-        }else if (!(getPassword.equals(password))) {
-                showToast("password is incorrect")
+        } else if (!(getPassword.equals(password))) {
+            showToast("password is incorrect")
         } else {
             val userDetails: String? = preferences.getString(
-                getEmail + getPassword + "data",
+                getEmail + getPassword,
                 "true"
             )
             editor = preferences.edit()
