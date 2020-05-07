@@ -1,30 +1,23 @@
 package com.tinuade.porfolio
 
-import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.tinuade.porfolio.MainActivity.AppPreferences.MODE
-import com.tinuade.porfolio.MainActivity.AppPreferences.NAME
-import com.tinuade.porfolio.MainActivity.AppPreferences.preferences
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.grid_layout.*
 
 class MainActivity : AppCompatActivity() {
-    object AppPreferences {
-        const val NAME = "com.tinuade.porfolio.portfolio"
-        const val MODE = Context.MODE_PRIVATE
+
         lateinit var preferences: SharedPreferences
-    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        preferences = getSharedPreferences(NAME, MODE)
+        preferences = getSharedPreferences(SignUp.NAME, SignUp.MODE)
         val display: String? = preferences.getString("display", "")
         val displayEmail: TextView? = display_text
         displayEmail?.text = display
